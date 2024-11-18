@@ -6,8 +6,10 @@ import cors from 'cors';
 app.use(express.json());
 app.use(cors());
 
-app.get('/', (req: Request, res: Response) => {
-  //   const a = 10;
+const getAcontollor = (req: Request, res: Response) => {
+  const a: number = 10;
   res.send('Hello World!');
-});
+};
+
+app.get('/', getAcontollor);
 export default app;
